@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Will Of God</title>
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <script type="text/javascript" src="/public/js/Winwheel.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/public/main.css">
+
+        <script src="/public/js/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-wireframe'</script>
+        <link rel="stylesheet" href="/public/css/vex.css" />
+        <link rel="stylesheet" href="/public/css/vex-theme-wireframe.css" />
+
+        <script type="text/javascript" src="/public/gameConfig.js"></script>
+	</head>
+
+	<body>
+        <div class="category" style="background-color:rgba(182, 189, 255, 0.753);height:6.5rem;text-align:center;margin-top:2rem;">
+            <h1 id="catText" style="font-size:5em;">Category</h1>
+        </div>
+        <div id="letterBoard">
+            <div class="letters">
+                <div class="surround">
+                    <table id="puz-board" class="puz-board">
+                        <tbody>
+                            <tr class="puz-board-row">
+                                <td class="corner"></td>
+                                <td id="box-1-2"></td>
+                                <td id="box-1-3"></td>
+                                <td id="box-1-4"></td>
+                                <td id="box-1-5"></td>
+                                <td id="box-1-6"></td>
+                                <td id="box-1-7"></td>
+                                <td id="box-1-8"></td>
+                                <td id="box-1-9"></td>
+                                <td id="box-1-10"></td>
+                                <td id="box-1-11"></td>
+                                <td id="box-1-12"></td>
+                                <td id="box-1-13"></td>
+                                <td class="corner"></td>
+                            </tr>
+                            <tr class="puz-board-row">
+                                <td id="box-2-1"></td>
+                                <td id="box-2-2"></td>
+                                <td id="box-2-3"></td>
+                                <td id="box-2-4"></td>
+                                <td id="box-2-5"></td>
+                                <td id="box-2-6"></td>
+                                <td id="box-2-7"></td>
+                                <td id="box-2-8"></td>
+                                <td id="box-2-9"></td>
+                                <td id="box-2-10"></td>
+                                <td id="box-2-11"></td>
+                                <td id="box-2-12"></td>
+                                <td id="box-2-13"></td>
+                                <td id="box-2-14"></td>
+                            </tr>
+                            <tr class="puz-board-row">
+                                <td id="box-3-1"></td>
+                                <td id="box-3-2"></td>
+                                <td id="box-3-3"></td>
+                                <td id="box-3-4"></td>
+                                <td id="box-3-5"></td>
+                                <td id="box-3-6"></td>
+                                <td id="box-3-7"></td>
+                                <td id="box-3-8"></td>
+                                <td id="box-3-9"></td>
+                                <td id="box-3-10"></td>
+                                <td id="box-3-11"></td>	
+                                <td id="box-3-12"></td>
+                                <td id="box-3-13"></td>
+                                <td id="box-3-14"></td>
+                            </tr>
+                            <tr class="puz-board-row">
+                                <td class="corner"></td>
+                                <td id="box-4-2"></td>
+                                <td id="box-4-3"></td>
+                                <td id="box-4-4"></td>
+                                <td id="box-4-5"></td>
+                                <td id="box-4-6"></td>
+                                <td id="box-4-7"></td>
+                                <td id="box-4-8"></td>
+                                <td id="box-4-9"></td>
+                                <td id="box-4-10"></td>
+                                <td id="box-4-11"></td>
+                                <td id="box-4-12"></td>
+                                <td id="box-4-13"></td>
+                                <td class="corner"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="score" style="background-color:rgba(185, 185, 216, 0.753);height:10rem;text-align:center;margin-top:2rem;width:100%;">
+                <div class="surround">
+                    <table id="score-board" class="score-board">
+                        <tbody>
+                            <tr class="score-board-row">
+                                <td id="P1">$0</td>
+                                <td id="P2">$0</td>
+                                <td id="P3">$0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="wheel" class="hidden">
+            <div id="canvasContainer">
+                <canvas id='canvas' width='1760' height='700' style="text-align:center;">
+                        Canvas not supported, use another browser.
+                </canvas>
+            </div>
+            <div class="wheelText" style="background-color:rgba(0, 26, 255, 0.753);height:6.5rem;text-align:center;margin-top:2rem;">
+                    <h1 id="catText" style="font-size:5em;">Category</h1>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="/public/js/Winwheel.min.js"></script>
+    <script type="text/javascript" src="/public/generation.js"></script>
+    <script type="text/javascript" src="/public/main.js"></script>
+    <script type="text/javascript" src="/public/wheel.js"></script>
+</html>

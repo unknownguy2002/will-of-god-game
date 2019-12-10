@@ -1,0 +1,11 @@
+{
+    "defaultSeverity": "warning",
+    "extends": [
+      "tslint:recommended"
+    ],
+    "rules": {
+        "object-literal-sort-keys": true,
+        "semicolon": true,
+        "trailing-comma": false
+    }
+}
