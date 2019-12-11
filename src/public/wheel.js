@@ -54,7 +54,7 @@ let theWheel = new Winwheel({
     }
 });
 
-let audio = new Audio('http://dougtesting.net//elements/sound/tick.mp3');
+let audio = new Audio('/public/audio/tick.mp3');
  
 // This function is called when the sound is to be played.
 function playSound()
