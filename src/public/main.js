@@ -1,16 +1,23 @@
-let currentPlayer = 1
+let currentPlayer = 4
+let scores = {
+    "1": 0,
+    "2": 0,
+    "3": 0
+}
 let sounds = {
     "0": {
-        "path": "/public/audio/wofTheme.mp3",
-        "volume": 100,
+        "path": "/public/audio/themeFaded.mp3",
+        "volume": 0.7,
         "running": false
     },
     "9": {
         "path": "/public/audio/intense.mp3",
+        "volume": 0.6,
         "running": false
     },
     "8": {
         "path": "/public/audio/solve.mp3",
+        "volume": 0.6,
         "running": false
     }
 }
@@ -20,8 +27,21 @@ document.onkeypress = function(evt) {
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode).toString();
     console.log(typeof(charStr), charStr)
-    if(charStr === "="){
+    if(charStr === "`"){
+        document.getElementById("wheelText").innerHTML = ""
         toggleWheel()
+    }
+    if(charStr === "="){
+        addToPlayer(50)
+    }
+    if(charStr === "-"){
+        addToPlayer(-50)
+    }
+    if(charStr === "+"){
+        addToPlayer(250)
+    }
+    if(charStr === "_"){
+        addToPlayer(-250)
     }
     if(charStr === "1"){
         currentPlayer = 1
@@ -54,6 +74,10 @@ function toggleSoundboard(charStr){
     if(sounds[charStr].running == false){
         let sound = new Audio(sounds[charStr].path)
         sound.play()
+        if(sounds[charStr].volume){
+            console.log(sound.volume)
+            sound.volume = sounds[charStr].volume
+        }
         sounds[charStr].running = true
         sounds[charStr].instance = sound
         return;
@@ -99,6 +123,16 @@ function toggleWheel(){
         document.getElementById("wheel").classList.add("hidden");
         theWheel.stopAnimation(false);
         wheelState = false;
+    }
+}
+
+function addToPlayer(addition){
+    if(currentPlayer == 4){
+        return;
+    } else {
+        console.log("adding")
+        scores[currentPlayer.toString()] = scores[currentPlayer.toString()] + addition;
+        document.getElementById("P"+currentPlayer.toString()).innerHTML = "$" + (scores[currentPlayer.toString()]);
     }
 }
 

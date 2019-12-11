@@ -1,6 +1,6 @@
 @font-face {
-  font-family: wffFont;
-  src: url("public/fonts/SF Fortune Wheel Bold.ttf");
+  font-family: WOFFont;
+  src: url("/public/fonts/SF Fortune Wheel Bold.ttf");
   font-weight: bold;
 }
 
@@ -60,6 +60,7 @@ body {
 }
 
 .score-board {
+  font-family: Courier Impact;
   border-spacing: 20rem 10px;
   border-collapse: separate;
   margin: 15px auto;
